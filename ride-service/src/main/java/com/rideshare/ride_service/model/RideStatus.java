@@ -1,0 +1,17 @@
+package com.rideshare.ride_service.model;
+
+/*
+* FLOW:
+* REQUESTED->MATCHING->ACCEPTED->DRIVER_ARRIVING
+* ->RIDE_STARTED->COMPLETED
+* CANCELLED(CAN HAPPEN AT MULTIPLE STAGES)*/
+public enum RideStatus {
+    REQUESTED,
+    MATCHING,
+    ACCEPTED,
+    DRIVER_ARRIVING,
+    RIDE_STARTED,
+    COMPLETED,
+    CANCELLED
+
+}

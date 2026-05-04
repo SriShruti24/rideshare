@@ -1,0 +1,24 @@
+package com.rideshare.ride_service.config;
+
+import org.apache.kafka.clients.admin.NewTopic;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Bean;
+import org.springframework.kafka.config.TopicBuilder;
+
+@Configurable
+public class KafkaConfig {
+    //Topic where Ride Service published ride request
+    //Matching Service subscribes to this topic
+
+    @Bean
+    public NewTopic rideRequestedTopic(){
+        return TopicBuilder.name("ride.requested").partitions(3).replicas(1).build();
+    }
+
+    //Topic  where Matching Service publishes match results
+    //Ride Service subscribes to thi topic
+    @Bean
+    public NewTopic rideMatchesTopic(){
+        return TopicBuilder.name("ride.matched").partitions(3).replicas(1).build();
+    }
+}
