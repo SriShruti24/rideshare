@@ -1,0 +1,39 @@
+# Java / Maven
+target/
+*.class
+
+# Maven build files backups
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+
+# IDEs
+.idea/
+*.iml
+*.iws
+.vscode/
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Temporary
+tmp/
+*.tmp
+
+# OneDrive / shortcuts
+*.lnk
